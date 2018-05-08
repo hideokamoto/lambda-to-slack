@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'Posting plack message'
+Resources:
+  PostSlack:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs6.10
+      Environment:
+        Variables:
+          SLACK_TOKEN: !Ref SlackToken
+          SLACK_CHANEL: !Ref SlackChanel
+Parameters:
+  SlackToken:
+    Type: String
+  SlackChanel:
+    Type: String
