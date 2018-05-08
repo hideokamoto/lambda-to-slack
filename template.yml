@@ -11,6 +11,8 @@ Resources:
         Variables:
           SLACK_TOKEN: !Ref SlackToken
           SLACK_CHANEL: !Ref SlackChanel
+          SLACK_CHANEL_DEV: !Ref SlackChanelDev
+          STAGE: !Ref Stage
   IncommingWebHook:
     Type: AWS::Serverless::Function
     Properties:
@@ -19,14 +21,20 @@ Resources:
       Environment:
         Variables:
           SLACK_CHANEL: !Ref SlackChanel
+          SLACK_CHANEL_DEV: !Ref SlackChanelDev
           SLACK_PATH: !Ref SlackPath
           SLACK_USERNAME: !Ref SlackUsername
+          STAGE: !Ref Stage
 Parameters:
   SlackToken:
     Type: String
   SlackChanel:
     Type: String
+  SlackChanelDev:
+    Type: String
   SlackPath:
     Type: String
   SlackUsername:
+    Type: String
+  Stage:
     Type: String

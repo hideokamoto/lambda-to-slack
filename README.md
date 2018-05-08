@@ -17,9 +17,11 @@ export AWS_PROFILE='default'
 export AWS_REGION='us-east-1'
 export SLACK_TOKEN='xoxa-YOUR_TOKEN'
 export SLACK_CHANEL='#random'
+export SLACK_CHANEL_DEV='#random'
 export S3_BUCKET='YOUR_BUCKET'
 export SLACK_PATH='/services/{YOUR_INNCOMING_WEBHOOK_PATH}'
 export SLACK_USERNAME='INCOMMINT_WEBHOOK_BOT_NAME'
+export STAGE='development'
 
 $ dienv allow
 ```
