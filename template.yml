@@ -19,14 +19,14 @@ Resources:
       Environment:
         Variables:
           SLACK_CHANEL: !Ref SlackChanel
-          SLACK_PATH: !Ref SLACK_PATH
-          SLACK_USERNAME: !Ref SLACK_USERNAME
+          SLACK_PATH: !Ref SlackPath
+          SLACK_USERNAME: !Ref SlackUsername
 Parameters:
   SlackToken:
     Type: String
   SlackChanel:
     Type: String
-  SLACK_PATH:
+  SlackPath:
     Type: String
-  SLACK_USERNAME:
+  SlackUsername:
     Type: String

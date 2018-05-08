@@ -18,6 +18,8 @@ export AWS_REGION='us-east-1'
 export SLACK_TOKEN='xoxa-YOUR_TOKEN'
 export SLACK_CHANEL='#random'
 export S3_BUCKET='YOUR_BUCKET'
+export SLACK_PATH='/services/{YOUR_INNCOMING_WEBHOOK_PATH}'
+export SLACK_USERNAME='INCOMMINT_WEBHOOK_BOT_NAME'
 
 $ dienv allow
 ```
@@ -26,7 +28,12 @@ $ dienv allow
 
 ```
 $ npm i -g aws-sam-local
+
+# post by slack app
 $ sam local invoke PostSlack --event ./event.json
+
+# post by slack incooming webhook
+$ sam local invoke IncommingWebHook --event ./event.json
 ```
 
 ## deployment
