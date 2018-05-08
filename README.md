@@ -3,8 +3,8 @@
 ## Getting started
 
 ```
-$ git clone
-$ cd
+$ git clone git@github.com:hideokamoto/lambda-to-slack.git
+$ cd lambda-to-slack
 $ npm i
 $ cp .envrc.example .envrc
 ```
