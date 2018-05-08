@@ -11,8 +11,22 @@ Resources:
         Variables:
           SLACK_TOKEN: !Ref SlackToken
           SLACK_CHANEL: !Ref SlackChanel
+  IncommingWebHook:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.incommingHandler
+      Runtime: nodejs6.10
+      Environment:
+        Variables:
+          SLACK_CHANEL: !Ref SlackChanel
+          SLACK_PATH: !Ref SLACK_PATH
+          SLACK_USERNAME: !Ref SLACK_USERNAME
 Parameters:
   SlackToken:
     Type: String
   SlackChanel:
+    Type: String
+  SLACK_PATH:
+    Type: String
+  SLACK_USERNAME:
     Type: String
