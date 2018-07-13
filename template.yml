@@ -6,7 +6,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs8.10
       Environment:
         Variables:
           SLACK_TOKEN: !Ref SlackToken
@@ -17,7 +17,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.incommingHandler
-      Runtime: nodejs6.10
+      Runtime: nodejs8.10
       Environment:
         Variables:
           SLACK_CHANEL: !Ref SlackChanel
