@@ -38,6 +38,17 @@ $ sam local invoke PostSlack --event ./event.json
 $ sam local invoke IncommingWebHook --event ./event.json
 ```
 
+### Event format
+
+```
+{
+  "slackChanel": "#prod_chanel",
+  "slackDevChanel": "#dev_chanel",
+  "message": "Test message from Lambda",
+  "emoji": ":ghost:"
+}
+```
+
 ## deployment
 
 ```
